@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components/macro";
-import _debounce from "lodash.debounce";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components/macro';
+import _debounce from 'lodash.debounce';
 import {
   Container,
   Title,
   Paragraph,
   Line,
   Underline,
-} from "../../globalStyles";
-import card01 from "../../assets/images/Chp3/card01.png";
-import card02 from "../../assets/images/Chp3/card02.png";
-import card03 from "../../assets/images/Chp3/card03.png";
-import card04 from "../../assets/images/Chp3/card04.png";
-import card05 from "../../assets/images/Chp3/card05.png";
-import card06 from "../../assets/images/Chp3/card06.png";
-import card07 from "../../assets/images/Chp3/card07.png";
-import card08 from "../../assets/images/Chp3/card08.png";
-import card09 from "../../assets/images/Chp3/card09.png";
-import card10 from "../../assets/images/Chp3/card10.png";
-import card11 from "../../assets/images/Chp3/card11.png";
+} from '../../globalStyles';
+import card01 from '../../assets/images/Chp3/card01.png';
+import card02 from '../../assets/images/Chp3/card02.png';
+import card03 from '../../assets/images/Chp3/card03.png';
+import card04 from '../../assets/images/Chp3/card04.png';
+import card05 from '../../assets/images/Chp3/card05.png';
+import card06 from '../../assets/images/Chp3/card06.png';
+import card07 from '../../assets/images/Chp3/card07.png';
+import card08 from '../../assets/images/Chp3/card08.png';
+import card09 from '../../assets/images/Chp3/card09.png';
+import card10 from '../../assets/images/Chp3/card10.png';
+import card11 from '../../assets/images/Chp3/card11.png';
+
+import DefaultImage from './Graphs/DefaultImage';
 
 const Text = ({ background }) => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -26,9 +28,9 @@ const Text = ({ background }) => {
   useEffect(() => {
     const handleResize = _debounce(() => setWidth(window.innerWidth), 300);
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -76,7 +78,18 @@ const Text = ({ background }) => {
             </Paragraph>
           </TextWrapper>
           <ImageWrapper>
-            <RetouchedImage src={card01} alt="신혼부부 이야기 첫번째 컷" />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            <DefaultImage />
+            {/* <RetouchedImage src={card01} alt="신혼부부 이야기 첫번째 컷" />
             <RetouchedImage src={card02} alt="신혼부부 이야기 두번째 컷" />
             <RetouchedImage src={card03} alt="신혼부부 이야기 세번째 컷" />
             <RetouchedImage src={card04} alt="신혼부부 이야기 네번째 컷" />
@@ -85,12 +98,12 @@ const Text = ({ background }) => {
             <RetouchedImage src={card07} alt="신혼부부 이야기 일곱번째 컷" />
             <RetouchedImage src={card08} alt="신혼부부 이야기 여덟번째 컷" />
             <RetouchedImage src={card09} alt="신혼부부 이야기 아홉번째 컷" />
-            <RetouchedImage src={card10} alt="신혼부부 이야기 열번째 컷" />
-            <RetouchedImage
+            <RetouchedImage src={card10} alt="신혼부부 이야기 열번째 컷" /> 
+               <RetouchedImage
               src={card11}
               alt="신혼부부 이야기 열한번째 컷"
               style={{ paddingBottom: 0 }}
-            />
+            />*/}
           </ImageWrapper>
         </Container>
       </Section>
