@@ -8,7 +8,7 @@ export default function Footer() {
       <CreditContainer>
         <CreditUnitWrapper>
           <Role>기획&nbsp;</Role>
-          <Name>KBS창원 심층기획팀</Name>
+          <Name>하영은</Name>
         </CreditUnitWrapper>
         <CreditUnitWrapper>
           <Role>디자인&nbsp;</Role>

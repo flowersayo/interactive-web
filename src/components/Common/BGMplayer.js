@@ -1,11 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
-import styled from "styled-components";
-import { useLocation } from "react-router-dom";
-
-// 각 챕터별 배경음악 음원
-import wave1 from "../../assets/audios/chp1ThemeSong.mp3";
-import wave2 from "../../assets/audios/chp2ThemeSong.mp3";
-import wave3 from "../../assets/audios/chp3ThemeSong.mp3";
+import React, { useRef, useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 
 const BGMplayer = () => {
   const [visiblity, setVisibility] = useState(false);
@@ -16,14 +11,14 @@ const BGMplayer = () => {
 
   useEffect(() => {
     // 페이지별 배경음악 변경
-    if (location.pathname === "/chp1") {
-      setWave(wave1);
+    if (location.pathname === '/chp1') {
+      // setWave(wave1);
       setVisibility(true);
-    } else if (location.pathname === "/chp2") {
-      setWave(wave2);
+    } else if (location.pathname === '/chp2') {
+      // setWave(wave2);
       setVisibility(true);
-    } else if (location.pathname === "/chp3") {
-      setWave(wave3);
+    } else if (location.pathname === '/chp3') {
+      // setWave(wave3);
       setVisibility(true);
     }
 
@@ -110,7 +105,7 @@ const PlayPause = styled.div`
     border-style: solid;
     border-width: 7.5px 0 7.5px 12.5px;
   }
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     visibility: hidden;
     &:checked + label {
       display: block;

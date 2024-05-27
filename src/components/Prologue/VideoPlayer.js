@@ -1,28 +1,25 @@
-import React, { useState, useCallback, useRef, useLayoutEffect } from "react";
-import ReactPlayer from "react-player/lazy";
-import styled from "styled-components/macro";
-import screenfull from "screenfull";
-import { useSelector, useDispatch } from "react-redux";
-import { handleMenu } from "../../modules/menuReducer";
-
-// 다큐 프롤로그 영상
-import prologue from "../../assets/videos/prologue.mp4";
+import React, { useState, useCallback, useRef, useLayoutEffect } from 'react';
+import ReactPlayer from 'react-player/lazy';
+import styled from 'styled-components/macro';
+import screenfull from 'screenfull';
+import { useSelector, useDispatch } from 'react-redux';
+import { handleMenu } from '../../modules/menuReducer';
 
 // 컴포넌트
-import PlayerControls from "./PlayerControls";
+import PlayerControls from './PlayerControls';
 
 const format = (seconds) => {
   if (isNaN(seconds)) {
-    return "00:00";
+    return '00:00';
   }
 
   const date = new Date(seconds * 1000);
   const hh = date.getUTCHours();
   const mm = date.getUTCMinutes();
-  const ss = date.getUTCSeconds().toString().padStart(2, "0");
+  const ss = date.getUTCSeconds().toString().padStart(2, '0');
 
   if (hh) {
-    return `${hh}:${mm.toString().padStart(2, "0")}:${ss}`;
+    return `${hh}:${mm.toString().padStart(2, '0')}:${ss}`;
   }
   return `${mm}:${ss}`;
 };
@@ -96,10 +93,10 @@ const Video = () => {
   const handleProgress = useCallback(
     (changeState) => {
       if (count > 1.5) {
-        controlsRef.current.style.visibility = "hidden";
+        controlsRef.current.style.visibility = 'hidden';
         count = 0;
       }
-      if (controlsRef.current.style.visibility === "visible") {
+      if (controlsRef.current.style.visibility === 'visible') {
         count += 1;
       }
       if (!state.seeking) {
@@ -139,26 +136,27 @@ const Video = () => {
   }, [open]);
 
   const handleMouseMove = () => {
-    controlsRef.current.style.visibility = "visible";
+    controlsRef.current.style.visibility = 'visible';
     count = 0;
   };
 
   const currentTime = playerRef.current
     ? playerRef.current.getCurrentTime()
-    : "00:00";
+    : '00:00';
   const duration = playerRef.current
     ? playerRef.current.getDuration()
-    : "00:00";
+    : '00:00';
 
   const elapsedTime = format(currentTime);
   const totalDuration = format(duration);
 
   return (
     <Section ref={playerContainerRef} onMouseMove={handleMouseMove} play>
+      {/*
       <ReactPlayer
         ref={playerRef}
-        width={"100%"}
-        height={"100%"}
+        width={'100%'}
+        height={'100%'}
         url={prologue}
         muted={muted}
         playing={playing}
@@ -167,6 +165,7 @@ const Video = () => {
         onProgress={handleProgress}
         onEnded={onClickMenu}
       />
+  */}
       <PlayerControls
         ref={controlsRef}
         onPlayPause={handlePlayPause}
@@ -201,6 +200,6 @@ const Section = styled.div`
   height: 100vh;
   background: #000;
   z-index: 99;
-  transform: ${({ play }) => (play ? "translateY(0%)" : "translateY(100%)")};
+  transform: ${({ play }) => (play ? 'translateY(0%)' : 'translateY(100%)')};
   transition: 300ms ease-in-out;
 `;

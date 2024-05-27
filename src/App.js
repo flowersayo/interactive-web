@@ -16,9 +16,10 @@ const Chapter1 = lazy(() => import('./pages/chp1'));
 const Chapter2 = lazy(() => import('./pages/chp2'));
 const Chapter3 = lazy(() => import('./pages/chp3'));
 
-ReactGA.initialize('UA-193674226-1'); // Google Analytics 추적 ID
+//ReactGA.initialize('UA-193674226-1'); // Google Analytics 추적 ID
 
 function App() {
+  /*
   useEffect(() => {
     Aos.init({
       mirror: false,
@@ -27,6 +28,7 @@ function App() {
     // 페이지 뷰 리포트
     ReactGA.pageview(window.location.pathname);
   }, []);
+  */
 
   return (
     <Router>

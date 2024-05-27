@@ -1,5 +1,6 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
+/*
 // 제 1부
 import Hiroya from "../assets/videos/Chp1/Hiroya.mp4";
 import Ayano from "../assets/videos/Chp1/Ayano.mp4";
@@ -17,6 +18,7 @@ import Kyungsoo from "../assets/videos/Chp3/Kyungsoo.mp4"; // 김경수 경남�
 import Mazda from "../assets/videos/Chp3/Mazda.mp4"; // 마스다 히토야 '마스다 보고서' 작성자·전 일본 총무 대신 INT 영상
 import Ikeda from "../assets/videos/Chp3/Ikeda.mp4"; // 이케다 다카히토 히메지시청 지방소생 담당 INT 영상
 
+*/
 const Line = styled.div`
   margin-bottom: 20px;
 
@@ -26,9 +28,9 @@ const Line = styled.div`
 `;
 
 export const INTDataHiroya = {
-  src: Hiroya,
-  interviewee: "마쓰다 히로야",
-  position: "전 도쿄대 교수",
+  //src: Hiroya,
+  interviewee: '마쓰다 히로야',
+  position: '전 도쿄대 교수',
   lines: (
     <>
       <Line>
@@ -49,9 +51,9 @@ export const INTDataHiroya = {
 };
 
 export const INTDataAyano = {
-  src: Ayano,
-  interviewee: "아야노 츠키미",
-  position: "일본 도쿠시마현",
+  //src: Ayano,
+  interviewee: '아야노 츠키미',
+  position: '일본 도쿠시마현',
   lines: (
     <>
       <Line>
@@ -68,9 +70,9 @@ export const INTDataAyano = {
 };
 
 export const INTDataSangho = {
-  src: Sangho,
-  interviewee: "이상호",
-  position: "한국고용정보원 연구위원",
+  //src: Sangho,
+  interviewee: '이상호',
+  position: '한국고용정보원 연구위원',
   lines: (
     <>
       <Line>
@@ -88,9 +90,9 @@ export const INTDataSangho = {
 };
 
 export const INTDataGangrae = {
-  src: Gangrae,
-  interviewee: "마강래",
-  position: "중앙대 도시부동산계획학과 교수",
+  //src: Gangrae,
+  interviewee: '마강래',
+  position: '중앙대 도시부동산계획학과 교수',
   lines: (
     <>
       <Line>
@@ -107,9 +109,9 @@ export const INTDataGangrae = {
 };
 
 export const INTDataKyung = {
-  src: Kyung,
-  interviewee: "성경륭",
-  position: "초대 국가균형발전위원장",
+  //src: Kyung,
+  interviewee: '성경륭',
+  position: '초대 국가균형발전위원장',
   lines: (
     <>
       <Line>
@@ -125,9 +127,9 @@ export const INTDataKyung = {
 };
 
 export const INTDataSohyun = {
-  src: Sohyun,
-  interviewee: "박소현",
-  position: "부산대학생",
+  //src: Sohyun,
+  interviewee: '박소현',
+  position: '부산대학생',
   lines: (
     <>
       <Line>
@@ -148,9 +150,9 @@ export const INTDataSohyun = {
 };
 
 export const INTDataGangrae02 = {
-  src: Gangrae02,
-  interviewee: "마강래",
-  position: "중앙대 도시부동산계획학과 교수",
+  //src: Gangrae02,
+  interviewee: '마강래',
+  position: '중앙대 도시부동산계획학과 교수',
   lines: (
     <>
       <Line>
@@ -168,9 +170,9 @@ export const INTDataGangrae02 = {
 };
 
 export const INTDataDooyoung = {
-  src: Dooyoung,
-  interviewee: "이두영",
-  position: "충북경제사회연구원장",
+  //src: Dooyoung,
+  interviewee: '이두영',
+  position: '충북경제사회연구원장',
   lines: (
     <>
       <Line>
@@ -187,9 +189,9 @@ export const INTDataDooyoung = {
 };
 
 export const INTDataSangho02 = {
-  src: Sangho02,
-  interviewee: "이상호",
-  position: "한국고용정보원 연구위원",
+  //src: Sangho02,
+  interviewee: '이상호',
+  position: '한국고용정보원 연구위원',
   lines: (
     <>
       <Line>
@@ -207,9 +209,9 @@ export const INTDataSangho02 = {
 };
 
 export const INTDataSangjoon = {
-  src: Sangjoon,
-  interviewee: "이상준",
-  position: "경남 진주 공공기관 근무",
+  //src: Sangjoon,
+  interviewee: '이상준',
+  position: '경남 진주 공공기관 근무',
   lines: (
     <>
       <Line>
@@ -222,9 +224,9 @@ export const INTDataSangjoon = {
 };
 
 export const INTDataKyungsoo = {
-  src: Kyungsoo,
-  interviewee: "김경수",
-  position: "경남도지사",
+  //src: Kyungsoo,
+  interviewee: '김경수',
+  position: '경남도지사',
   lines: (
     <>
       <Line>
@@ -245,8 +247,8 @@ export const INTDataKyungsoo = {
 };
 
 export const INTDataMazda = {
-  src: Mazda,
-  interviewee: "마스다 히로야",
+  //src: Mazda,
+  interviewee: '마스다 히로야',
   position: `'마스다 보고서' 작성자·전 일본 총무 대신`,
   lines: (
     <>
@@ -265,9 +267,9 @@ export const INTDataMazda = {
 };
 
 export const INTDataIkeda = {
-  src: Ikeda,
-  interviewee: "이케다 다카히토",
-  position: "히메지시청 지방소생 담당",
+  //src: Ikeda,
+  interviewee: '이케다 다카히토',
+  position: '히메지시청 지방소생 담당',
   lines: (
     <>
       <Line>
