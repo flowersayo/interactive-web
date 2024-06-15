@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
-import { FacebookShareButton, TwitterShareButton } from 'react-share';
-import KaKaoShareButton from './KaKao2';
+
 import Footer from './Footer';
+import { Gap } from '../../globalStyles';
 
 const End = ({ bgImg, children }) => {
   return (
@@ -15,44 +15,11 @@ const End = ({ bgImg, children }) => {
               지방 소멸은 이미 심각하게 진행됐습니다. 더 늦기 전에 이 사실을
               널리 알려주세요.
             </Message>
+            <Gap size="100px" />
           </MsgWrapper>
           {/* SNS 섹션 */}
-          <SNSWrapper>
-            <KaKaoShareButton
-              font={`95px`}
-              background={`rgba(0, 0, 0, 0.6)`}
-              radius={`50px`}
-              padding={`30px 10px`}
-            />
-            <FacebookShareButton
-              url={'https://infallible-montalcini-e57de1.netlify.app'}
-              quote={'소멸의 땅, 지방은 어떻게 사라지나??'}
-              hashtag="#지방소멸, #위기의전조, #KBS, #특집다큐"
-              style={{ outline: 'none' }}
-              image={bgImg}
-            >
-              <Facebook />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={'https://infallible-montalcini-e57de1.netlify.app'}
-              quote={'소멸의 땅, 지방은 어떻게 사라지나'}
-              hashtag="#지방소멸 #위기의전조 #KBS #특집다큐"
-              style={{ outline: 'none' }}
-            >
-              <Twitter />
-            </TwitterShareButton>
-          </SNSWrapper>
           <BtnWrapper>{children}</BtnWrapper>
-          <BroadcastingGuideWrapper>
-            <Light>보다 자세한 내용은&nbsp;</Light>
-            <Bold>
-              KBS 1TV {`<시사기획 창>`}, 소멸의 땅: 지방은 어떻게 사라지나
-            </Bold>
-            <Light>
-              &nbsp;편 (4월 4일, 밤 9시 40분)에서 확인할 수 있습니다.
-            </Light>
-          </BroadcastingGuideWrapper>
-          {/* 푸터 */}
+
           <Footer />
         </Wrapper>
       </Container>

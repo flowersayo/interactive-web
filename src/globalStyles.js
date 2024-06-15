@@ -1,11 +1,26 @@
-import styled, { createGlobalStyle } from "styled-components/macro";
+import styled, { createGlobalStyle } from 'styled-components/macro';
 
 export const GlobalStyle = createGlobalStyle`
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MYHaemalgeunSangsang';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYHaemalgeunSangsang.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
     * {
+     
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Noto Serif KR' serif, 'NanumSquare', sans-serif;
+        font-family: 'Pretendard-Regular','Noto Serif KR' serif, 'NanumSquare', sans-serif;
     }
 
     html, body {
@@ -121,7 +136,9 @@ export const Paragraph = styled.div`
     width: 80vw;
   }
 `;
-
+export const Gap = styled.div`
+  height: ${({ size }) => (size ? size : '30px')};
+`;
 // 밑줄처리된 문장
 export const Underline = styled.span`
   text-decoration: none;
@@ -133,7 +150,7 @@ export const Underline = styled.span`
   background-image: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(255, 138, 0, 0.7) 0
+    rgba(0, 198, 121, 0.7) 0
   );
   background-size: 100% 100%;
 
@@ -163,7 +180,7 @@ export const ReferenceWrapper = styled.div`
   display: flex;
   flex-direction: column;
   color: #aaaaaa;
-  font-family: "Noto Serif KR", serif;
+  font-family: 'Noto Serif KR', serif;
   text-align: right;
   margin-top: 20.5px;
 
@@ -205,7 +222,7 @@ export const ReferenceWrapper02 = styled.div`
   display: flex;
   flex-direction: column;
   color: #aaaaaa;
-  font-family: "Noto Serif KR", serif;
+  font-family: 'Noto Serif KR', serif;
   text-align: right;
   margin-top: 20.5px;
   margin-bottom: 80px;

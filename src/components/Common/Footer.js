@@ -7,29 +7,12 @@ export default function Footer() {
       <Divider />
       <CreditContainer>
         <CreditUnitWrapper>
-          <Role>기획&nbsp;</Role>
-          <Name>하영은</Name>
+          <Name>하영은&nbsp; </Name>
+          <Role>기획 디자인 데이터시각화</Role>
         </CreditUnitWrapper>
         <CreditUnitWrapper>
-          <Role>디자인&nbsp;</Role>
-          <Name>OOO</Name>
-        </CreditUnitWrapper>
-
-        <CreditUnitWrapper>
-          <Role>개발&nbsp;</Role>
-          <Name>김서연</Name>
-        </CreditUnitWrapper>
-        <CreditUnitWrapper>
-          <Role>데이터 시각화&nbsp;</Role>
-          <Name>OOO</Name>
-        </CreditUnitWrapper>
-        <CreditUnitWrapper>
-          <Role>리서처&nbsp;</Role>
-          <Name>OOO&nbsp;</Name>
-        </CreditUnitWrapper>
-        <CreditUnitWrapper>
-          <Role>제작&nbsp;</Role>
-          <Name>이화여자대학교 도전학기</Name>
+          <Name>김서연&nbsp; </Name>
+          <Role>개발</Role>
         </CreditUnitWrapper>
       </CreditContainer>
     </Container>
@@ -44,6 +27,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
 `;
 
 // 구분선

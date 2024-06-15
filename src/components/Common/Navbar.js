@@ -5,6 +5,7 @@ import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleMenu } from './../../modules/menuReducer';
+import LogoSrc from '../../assets/images/Logo/Logo.png';
 
 // 컴포넌트
 import KaKaoShareButton from './KaKao1';
@@ -34,12 +35,8 @@ const Navbar = () => {
       if (window.scrollY >= 88) {
         setNavbar(true);
         if (window.innerWidth >= 768) {
-          if (location.pathname === '/chp1') {
-            setPath('Chapter1 위기의 전조');
-          } else if (location.pathname === '/chp2') {
-            setPath('Chapter2 쏠림과 빨림');
-          } else if (location.pathname === '/chp3') {
-            setPath('Chapter3 공생과 공멸사이');
+          if (location.pathname === '/') {
+            setPath('시골 늙은이 마음은 누가 풀어주나?');
           }
         }
       } else {
@@ -81,38 +78,11 @@ const Navbar = () => {
   return (
     <>
       <Nav reduce={reduce} style={style}>
-        {/* 'KBS 창원 X 시사기획 창' 로고 */}
-
         {/* 현재 경로 띄우기 */}
         <CurrentPath>{path}</CurrentPath>
+        <Logo src={LogoSrc} />
         {/* SNS 공유 버튼 모음 */}
-        <NavBtn>
-          {/* 카카오  */}
-          <KaKaoShareButton
-            font={`24px`}
-            background={`transparent`}
-            radius={`0`}
-            padding={`0`}
-          />
-          {/* 페이스북 */}
-          <FacebookShareButton
-            url={'https://news.kbs.co.kr/special/somyeol/index.html'}
-            quote={'소멸의 땅, 지방은 어떻게 사라지나'}
-            hashtag="#지방소멸"
-            style={{ outline: 'none', margin: '0 28.3px' }}
-          >
-            <Facebook />
-          </FacebookShareButton>
-          {/* 트위터 */}
-          <TwitterShareButton
-            url={'https://news.kbs.co.kr/special/somyeol/index.html'}
-            quote={'소멸의 땅, 지방은 어떻게 사라지나'}
-            hashtag="#지방소멸"
-            style={{ outline: 'none' }}
-          >
-            <Twitter />
-          </TwitterShareButton>
-        </NavBtn>
+
         {/* 햄버거 메뉴 
         <StyledBurger open={open} onClick={onClickMenu}>
           <div />
@@ -122,7 +92,6 @@ const Navbar = () => {
         </StyledBurger>
         */}
         {/* 네비게이션 메뉴 */}
-        <MenuNav open={open} />
       </Nav>
       {/* 수평 스크롤 인디케이터 */}
       <HorizontalIndicator />
@@ -159,6 +128,7 @@ const Logo = styled.img`
   bottom: 0;
   left: 44px;
   margin: auto 0;
+  width: 70px;
 
   @media screen and (max-width: 425px) {
     left: 20px;
@@ -175,7 +145,7 @@ const Logo = styled.img`
 
 const CurrentPath = styled.span`
   position: absolute;
-  left: 311px;
+  left: 150px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -254,25 +224,4 @@ const NavBtn = styled.div`
   @media screen and (max-width: 425px) {
     display: none;
   }
-`;
-
-const SNSIcon = css`
-  font-size: 20.5px;
-  position: relative;
-  color: #fff;
-  outline: none;
-  vertical-align: middle;
-  cursor: pointer;
-
-  @media screen and (max-width: 425px) {
-    display: none;
-  }
-`;
-
-const Facebook = styled(FaFacebookF)`
-  ${SNSIcon}
-`;
-
-const Twitter = styled(FaTwitter)`
-  ${SNSIcon}
 `;

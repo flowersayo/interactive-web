@@ -13,8 +13,6 @@ import BGMplayer from './components/Common/BGMplayer';
 const Homepage = lazy(() => import('./pages/index'));
 const Prologue = lazy(() => import('./pages/prologue'));
 const Chapter1 = lazy(() => import('./pages/chp1'));
-const Chapter2 = lazy(() => import('./pages/chp2'));
-const Chapter3 = lazy(() => import('./pages/chp3'));
 
 //ReactGA.initialize('UA-193674226-1'); // Google Analytics 추적 ID
 
@@ -38,13 +36,7 @@ function App() {
         <Navbar />
         <BGMplayer />
         <Switch>
-          <Route exact path="/" component={Chapter3} />
-          {/** 
-           *  <Route path="/prologue" component={Prologue} />
-          <Route path="/chp1" component={Chapter1} />
-          <Route path="/chp2" component={Chapter2} />
-          <Route path="/chp3" component={Chapter3} />
-          */}
+          <Route exact path="/" component={Chapter1} />
         </Switch>
       </Suspense>
     </Router>
