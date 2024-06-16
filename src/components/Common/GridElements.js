@@ -107,36 +107,56 @@ export const MapWrapper = styled.div`
 `;
 
 export const Reference = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  color: #aaaaaa;
-  font-family: 'Pretendard-Regular';
   text-align: left;
-  margin-top: 20.5px;
   font-size: 15px;
   line-height: 170%;
-  margin-bottom: 100px;
+  margin: 10px;
+`;
 
-  @media screen and (max-width: 910px) {
-    width: 80vw;
-  }
+/**
+ * export const Paragraph = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  font-size: 20px;
+  color: #fff;
+  line-height: 40px;
+  white-space: pre-line;
+  width: 600px;
+  margin-bottom: 40px;
 
-  @media screen and (max-width: 768px) {
-    width: 80vw;
-    margin-top: 20px;
-  }
-
-  @media screen and (max-width: 720px) {
-    width: 80vw;
+  @media screen and (max-width: 600px) {
+    width: 75vw;
   }
 
   @media screen and (max-width: 425px) {
-    width: 80vw;
-    font-size: 13px;
+    font-size: 16px;
+    line-height: 30px;
+    width: 75vw;
+    margin-bottom: 20px;
   }
+
+  @media screen and (max-width: 375px) {
+    font-size: 16px;
+    line-height: 30px;
+    width: 75vw;
+    margin-bottom: 20px;
+  }
+`;
+
+ */
+
+export const ReferenceBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: #aaaaaa;
+  font-family: 'Pretendard-Regular';
+
+  margin-bottom: 100px;
+  border: 0.5px solid #aaaaaa;
+  padding: 10px;
 `;
 
 export const ReferenceWrapper = styled.div`
@@ -257,13 +277,6 @@ export const SearchBox = styled.div`
   margin: 24px 0 0 0;
   column-gap: 20px;
   grid-template-columns: 200px 200px;
-
-  @media screen and (max-width: 620px) {
-    display: grid;
-    row-gap: 8px;
-    grid-template-columns: 30vw 30vw 30vw;
-    margin: 20px 0 0 0;
-  }
 
   @media screen and (max-width: 425px) {
     display: grid;

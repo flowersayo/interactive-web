@@ -8,7 +8,7 @@ import {
   Line,
   Underline,
 } from '../../globalStyles';
-
+import { Gap } from '../../globalStyles';
 import DefaultImage from './Graphs/DefaultImage';
 import MentalHospitaMap from '../Ch1/Map/MentalHospitaMap/MentalHospitaMap';
 
@@ -24,23 +24,16 @@ const Text = ({ background }) => {
     };
   }, []);
 
-  useEffect(() => {
-    width > 425
-      ? setTitle(`농어촌 3곳 중 1곳이 ‘정신건강 의료 공백’`)
-      : setTitle(
-          <>
-            농어촌 3곳 중 1곳이 <br />
-            ‘정신건강 의료 공백’
-          </>
-        );
-  }, [width]);
-
   return (
     <Fragment background={background}>
       <Section>
         <Container>
           <TextWrapper>
-            <Title>{title}</Title>
+            <Title>
+              {' '}
+              농어촌 3곳 중 1곳이 <br />
+              ‘정신건강 의료 공백’
+            </Title>
             <MentalHospitaMap />
             <Paragraph>
               <Line>
@@ -56,6 +49,7 @@ const Text = ({ background }) => {
                 </Underline>{' '}
                 반면 강남구는 113곳, 서초구는 60곳이나 있었습니다.
               </Line>
+              <Gap size="50px" />
 
               <Line>
                 인구 비례로 살펴봐도 마찬가지입니다. 올해 기준 인구 10만명 당

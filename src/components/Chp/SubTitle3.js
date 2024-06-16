@@ -16,7 +16,7 @@ import Interview from '../Common/Interview';
 import Graph03 from './Graphs/Graph03';
 import Graph04 from './Graphs/Graph04';
 import { INTDataSangho } from '../../data/INTData';
-import { Reference } from '../Common/GridElements';
+import { Reference, ReferenceBox } from '../Common/GridElements';
 import DefaultImage from './Graphs/DefaultImage';
 import MentalHealthCenterMap from '../Ch1/Map/MentalHealthCenterMap/MentalHealthCenterMap';
 import { Gap } from '../../globalStyles';
@@ -52,7 +52,8 @@ const Text = ({ background }) => {
           <Container>
             <TextWrapper>
               <Title>
-                전문요원 없는 정신건강복지센터 15곳… <br />
+                전문요원 없는 <br />
+                정신건강복지센터 15곳… <br />
                 농어촌 정신건강 인력난
               </Title>
               <Gap size="50px" />
@@ -88,18 +89,17 @@ const Text = ({ background }) => {
               <Gap size="100px" />
               <MentalHealthCenterMap />
               <Paragraph style={{ marginBottom: 0 }}>
-                <Reference>
-                  <span>
+                <ReferenceBox>
+                  <Reference>
                     * 정신건강전문인력: 정신건강의학과 전문의, 정신건강 간호사,
-                    <br />
-                    정신건강 사회복지사, 정신건강 임상심리사, 정신건강
-                    작업치료사
-                  </span>
-                  <span>
+                    정신건강 사회복지사,
+                    <br /> 정신건강 임상심리사, 정신건강 작업치료사
+                  </Reference>
+                  <Reference>
                     * 정신건강일반인력: 간호사, 사회복지사, 임상심리사
-                  </span>
-                  <span>* 기타인력: 간호조무사, 기타 행정직</span>
-                </Reference>
+                  </Reference>
+                  <Reference>* 기타인력: 간호조무사, 기타 행정직</Reference>
+                </ReferenceBox>
                 <Line>
                   분석 결과 정신건강 전문인력이 한 명도 없는
                   기초정신건강복지센터는 전남 고흥군, 경남 함양군, 충남 보령시

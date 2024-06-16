@@ -12,7 +12,8 @@ const End = ({ bgImg, children }) => {
         <Wrapper>
           <MsgWrapper>
             <Message>
-              농어촌 노인의 정신건강을 위한 대안이 필요한 시점입니다
+              농어촌 노인의 정신건강을 위한
+              <br /> 대안이 필요한 시점입니다
             </Message>
             <Gap size="100px" />
           </MsgWrapper>

@@ -78,6 +78,7 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 80px;
   color: #fff;
+  max-width: 500px;
 
   @media screen and (max-width: 425px) {
     font-size: 30px;
@@ -112,7 +113,7 @@ export const Paragraph = styled.div`
   color: #fff;
   line-height: 40px;
   white-space: pre-line;
-  width: 700px;
+  max-width: 550px;
   margin-bottom: 20px;
 
   &:last-child {

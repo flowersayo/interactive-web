@@ -229,7 +229,7 @@ const MentalHealthCenterMap = () => {
         <InfoRow>
           <Column1>
             <TitleSection>
-              <Title>시군구별 정신 건강 전문 요원 비율</Title>
+              <Title>기초정신건강복지센터 전문인력 비율</Title>
               {/**  <Paragraph>
                <Line>
                   ㅇㅇ를 바탕으로 2024년 전국 시군구 단위 정신 건강 전문 요원
