@@ -278,13 +278,6 @@ export const SearchBox = styled.div`
   column-gap: 20px;
   grid-template-columns: 200px 200px;
 
-  @media screen and (max-width: 425px) {
-    display: grid;
-    row-gap: 8px;
-    grid-template-columns: 80vw;
-    margin: 20px 0 0 0;
-  }
-
   @media screen and (max-width: 375px) {
     display: grid;
     row-gap: 8px;
