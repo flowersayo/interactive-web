@@ -36,7 +36,9 @@ const Navbar = () => {
         setNavbar(true);
         if (window.innerWidth >= 768) {
           if (location.pathname === '/') {
-            setPath('시골 늙은이 마음은 누가 풀어주나?');
+            setPath(
+              '시골 늙은이 마음은 누가 풀어주나? : 데이터로 보는 지역별 정신건강 불평등'
+            );
           }
         }
       } else {

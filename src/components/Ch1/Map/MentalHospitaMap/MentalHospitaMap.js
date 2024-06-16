@@ -251,8 +251,10 @@ const MentalHospitaMap = () => {
                       <District>
                         {siDoName} {siGunGuName}
                       </District>
-                      <EmptyIndex idx={Number(cnt)}>
-                        정신건강 의료기관 &nbsp;
+
+                      <Unit>( 2024년 1월 기준 )</Unit>
+                      <EmptyIndex idx={Number(cnt)} size={'30px'}>
+                        정신건강 의료기관{' '}
                         <AnimatedNumber
                           animateToNumber={cnt} // 정수 부문
                           config={{ tension: 89, friction: 40 }}
@@ -260,6 +262,7 @@ const MentalHospitaMap = () => {
                         개
                       </EmptyIndex>
                       <Divider />
+
                       <Sentence>
                         <Unit>
                           <b> 인구 10만명 당 정신건강 의료기관 수&nbsp;</b>
@@ -280,7 +283,6 @@ const MentalHospitaMap = () => {
                         </Unit>
                       </Sentence>
                       <br />
-                      <Unit>( 2024년 1월 기준 )</Unit>
                     </EmptyHouseResult>
                   </ResultWrapper>
                 </>

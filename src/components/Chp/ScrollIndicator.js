@@ -43,7 +43,7 @@ const ScrollIndicator = () => {
   };
 
   const progressBarStyle = {
-    background: '#FF8A00',
+    background: '#3F6BB2',
     borderRadius: 10,
     height: scrolled,
   };
@@ -51,7 +51,7 @@ const ScrollIndicator = () => {
   const top = (window.innerHeight - 500) / 2 + `px`;
 
   const handleSetActive01 = useCallback(() => {
-    setArrivedSec01('#FF8A00');
+    setArrivedSec01('#3F6BB2');
   }, []);
 
   const handleSetInactive01 = useCallback(() => {
@@ -59,7 +59,7 @@ const ScrollIndicator = () => {
   }, []);
 
   const handleSetActive02 = useCallback(() => {
-    setArrivedSec02('#FF8A00');
+    setArrivedSec02('#3F6BB2');
   }, []);
 
   const handleSetInactive02 = useCallback(() => {
@@ -67,7 +67,7 @@ const ScrollIndicator = () => {
   }, []);
 
   const handleSetActive03 = useCallback(() => {
-    setArrivedSec03('#FF8A00');
+    setArrivedSec03('#3F6BB2');
   }, []);
 
   const handleSetInactive03 = useCallback(() => {

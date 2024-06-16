@@ -27,7 +27,12 @@ const Text = ({ background }) => {
   useEffect(() => {
     width > 425
       ? setTitle(`농어촌 3곳 중 1곳이 ‘정신건강 의료 공백’`)
-      : setTitle(<>농어촌 3곳 중 1곳이 ‘정신건강 의료 공백’</>);
+      : setTitle(
+          <>
+            농어촌 3곳 중 1곳이 <br />
+            ‘정신건강 의료 공백’
+          </>
+        );
   }, [width]);
 
   return (
@@ -101,7 +106,7 @@ const TextWrapper = styled.div`
   padding-top: 280px;
 
   @media screen and (max-width: 425px) {
-    padding-top: 200px;
+    padding-top: 50px;
   }
 `;
 

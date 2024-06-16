@@ -253,8 +253,8 @@ const MentalHealthCenterMap = () => {
                     <District>
                       {siDoName} {siGunGuName}
                     </District>
-                    <EmptyIndex color={getColor(percentage)} size={'40px'}>
-                      정신 건강 전문 요원 비율&nbsp;
+                    <EmptyIndex color={getColor(percentage)} size={'35px'}>
+                      기초정신건강복지센터 전문인력 비율&nbsp;
                       <AnimatedNumber
                         animateToNumber={`${
                           percentage.toString().split('.')[0]
@@ -276,7 +276,7 @@ const MentalHealthCenterMap = () => {
                     <Divider />
                     <Sentence>
                       <Unit>
-                        <b>*전문 요원 : &nbsp;</b>
+                        <b>*전문 인력 : &nbsp;</b>
                         <AnimatedNumber
                           animateToNumber={proCnt}
                           includeComma
@@ -291,7 +291,7 @@ const MentalHealthCenterMap = () => {
                         명
                       </Unit>
                       <Unit>
-                        <b>*일반 요원 : &nbsp;</b>
+                        <b>*일반 인력 : &nbsp;</b>
                         <AnimatedNumber
                           animateToNumber={genCnt}
                           includeComma
@@ -303,7 +303,7 @@ const MentalHealthCenterMap = () => {
                         명
                       </Unit>
                       <Unit>
-                        <b>*기타 요원 : &nbsp;</b>
+                        <b>*기타 인력 : &nbsp;</b>
                         <AnimatedNumber
                           animateToNumber={etcCnt}
                           includeComma
@@ -342,23 +342,12 @@ const MentalHealthCenterMap = () => {
             </MapContainer>
             <Legend />
           </MapWrapper>
-          <Bottom>
-            <Reference>
-              <span>
-                * 정신건강전문인력: 정신건강의학과 전문의, 정신건강 간호사,
-                <br />
-                정신건강 사회복지사, 정신건강 임상심리사, 정신건강 작업치료사
-              </span>
-              <span>* 정신건강일반인력: 간호사, 사회복지사, 임상심리사</span>
-              <span>* 기타인력: 간호조무사, 기타 행정직</span>
-            </Reference>
 
-            <ReferenceWrapper>
-              <span> 기초정신건강복지센터 인력 현황 지도</span>
-              <span>출처: 광역·기초자치단체별 정보공개청구</span>
-              <span>※ 기준: 2024년 3월, 비상근직 포함</span>
-            </ReferenceWrapper>
-          </Bottom>
+          <ReferenceWrapper>
+            <span> 기초정신건강복지센터 전문인력 비율 지도</span>
+            <span>출처: 광역·기초자치단체별 정보공개청구</span>
+            <span>※ 기준: 2024년 3월, 비상근직 포함</span>
+          </ReferenceWrapper>
         </InfoRow>
       </InfoWrapper>
     </Section>
@@ -370,7 +359,7 @@ class Legend extends React.Component {
     return (
       <LegendContainer>
         <LegendWrapper>
-          <LegendTitle>인구 10만명 당 전문요원</LegendTitle>
+          <LegendTitle>전문인력 비율</LegendTitle>
           <LegendEl>
             <LegendColor style={{ backgroundColor: '#1A9641' }} />
             <LegendContent>81% ~ 100%</LegendContent>

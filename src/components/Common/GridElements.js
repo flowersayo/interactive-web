@@ -44,20 +44,20 @@ export const Paragraph = styled.div`
   margin-bottom: 40px;
 
   @media screen and (max-width: 600px) {
-    width: 80vw;
+    width: 75vw;
   }
 
   @media screen and (max-width: 425px) {
     font-size: 16px;
     line-height: 30px;
-    width: 350px;
+    width: 75vw;
     margin-bottom: 20px;
   }
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 375px) {
     font-size: 16px;
     line-height: 30px;
-    width: 80vw;
+    width: 75vw;
     margin-bottom: 20px;
   }
 `;
@@ -110,36 +110,32 @@ export const Reference = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+
+  align-items: center;
   color: #aaaaaa;
-  font-family: 'Noto Serif KR', serif;
+  font-family: 'Pretendard-Regular';
   text-align: left;
   margin-top: 20.5px;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 170%;
+  margin-bottom: 100px;
 
   @media screen and (max-width: 910px) {
-    width: 93.75vw;
+    width: 80vw;
   }
 
   @media screen and (max-width: 768px) {
+    width: 80vw;
     margin-top: 20px;
   }
 
   @media screen and (max-width: 720px) {
-    width: 93.75vw;
+    width: 80vw;
   }
 
   @media screen and (max-width: 425px) {
-    span:nth-child(1) {
-      font-size: 13px;
-      line-height: 17px;
-      margin-bottom: 2px;
-    }
-
-    span:nth-child(2) {
-      font-size: 11px;
-      line-height: 15px;
-    }
+    width: 80vw;
+    font-size: 13px;
   }
 `;
 
@@ -164,6 +160,12 @@ export const ReferenceWrapper = styled.div`
     line-height: 18.5px;
   }
 
+  span:nth-child(3) {
+    font-size: 11px;
+    line-height: 21.5px;
+    margin-bottom: 2px;
+  }
+
   @media screen and (max-width: 910px) {
     width: 93.75vw;
   }
@@ -177,6 +179,7 @@ export const ReferenceWrapper = styled.div`
   }
 
   @media screen and (max-width: 425px) {
+    width: 80vw;
     span:nth-child(1) {
       font-size: 13px;
       line-height: 17px;
@@ -265,11 +268,11 @@ export const SearchBox = styled.div`
   @media screen and (max-width: 425px) {
     display: grid;
     row-gap: 8px;
-    grid-template-columns: 350px;
+    grid-template-columns: 80vw;
     margin: 20px 0 0 0;
   }
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 375px) {
     display: grid;
     row-gap: 8px;
     grid-template-columns: 80vw;
@@ -377,7 +380,7 @@ export const ExtinctIndex = styled.div`
     line-height: 45px;
   }
 
-  @media screen and (max-width: 355px) {
+  @media screen and (max-width: 375px) {
     font-size: 25px;
     line-height: 35px;
   }
@@ -394,12 +397,12 @@ export const EmptyIndex = styled.div`
   white-space: nowrap;
 
   @media screen and (max-width: 425px) {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 45px;
   }
 
-  @media screen and (max-width: 355px) {
-    font-size: 30px;
+  @media screen and (max-width: 375px) {
+    font-size: 25px;
     line-height: 40px;
   }
 `;
@@ -433,7 +436,7 @@ export const Unit = styled.div`
 export const Sentence = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 22.7px;
   gap: 5px;
   text-align: center;

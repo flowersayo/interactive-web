@@ -11,16 +11,16 @@ import SubTitle4 from '../components/Chp/SubTitle4';
 import SubTitle5 from '../components/Chp/SubTitle5';
 import End from '../components/Common/End';
 import outBgSrc from '../assets/images/Chp/outBg.webp';
-
+import inBgSrc from '../assets/images/Chp/inBg.webp';
 import subBg from '../assets/images/subBg.webp';
 import SeniorSuicideMap from '../components/Ch1/Map/SeniorSuicideMap/SeniorSuicideMap';
 
 const Chp3 = () => {
   const chp3 = {
     title: `시골 늙은이 마음은 누가 풀어주나?`,
-    image: Image,
-    description: `제 3장 공생과 공멸사이입니다.`,
-    hashtag: `#소멸의 땅 #공생과 공멸사이`,
+    image: inBgSrc,
+    description: `데이터로 보는 지역별 정신건강 불평등 웹사이트 입니다.`,
+    hashtag: `#정신건강 불평등`,
   };
 
   return (

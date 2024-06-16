@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components/macro";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components/macro';
 
 const ScrollIndicator = () => {
   const [reduce, setReduce] = useState(false);
@@ -19,9 +19,9 @@ const ScrollIndicator = () => {
       setScrolled(scrolled);
       setTotalHeight(winHeightPx);
     };
-    window.addEventListener("scroll", scrollProgress);
+    window.addEventListener('scroll', scrollProgress);
     return () => {
-      window.removeEventListener("scroll", scrollProgress);
+      window.removeEventListener('scroll', scrollProgress);
     };
   });
 
@@ -39,9 +39,9 @@ const ScrollIndicator = () => {
         setReduce(false);
       }
     };
-    window.addEventListener("scroll", reduceSize);
+    window.addEventListener('scroll', reduceSize);
     return () => {
-      window.removeEventListener("scroll", reduceSize);
+      window.removeEventListener('scroll', reduceSize);
     };
   }, [reduce]);
 
@@ -56,9 +56,9 @@ const ScrollIndicator = () => {
         setShow(false);
       }
     };
-    window.addEventListener("scroll", showProgress);
+    window.addEventListener('scroll', showProgress);
     return () => {
-      window.removeEventListener("scroll", showProgress);
+      window.removeEventListener('scroll', showProgress);
     };
   }, [show, totalHeight]);
 
@@ -88,16 +88,16 @@ const ProgressContainer = styled.div`
   top: 88px;
   height: 4px;
   width: 100vw;
-  display: ${({ show }) => (show ? "block" : "none")};
+  display: ${({ show }) => (show ? 'block' : 'none')};
 
   @media screen and (max-width: 425px) {
-    top: ${({ reduce }) => (reduce ? "60px" : "88px")};
+    top: ${({ reduce }) => (reduce ? '60px' : '88px')};
   }
 `;
 
 const ProgressBar = styled.div`
-  background: #ff8a00;
+  background: #3f6bb2;
   width: ${({ scrolled }) => scrolled};
   height: 4px;
-  display: ${({ show }) => (show ? "block" : "none")};
+  display: ${({ show }) => (show ? 'block' : 'none')};
 `;

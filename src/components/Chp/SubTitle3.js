@@ -9,13 +9,14 @@ import {
   Paragraph,
   Line,
   Underline,
+  Gulim,
 } from '../../globalStyles';
 
 import Interview from '../Common/Interview';
 import Graph03 from './Graphs/Graph03';
 import Graph04 from './Graphs/Graph04';
 import { INTDataSangho } from '../../data/INTData';
-
+import { Reference } from '../Common/GridElements';
 import DefaultImage from './Graphs/DefaultImage';
 import MentalHealthCenterMap from '../Ch1/Map/MentalHealthCenterMap/MentalHealthCenterMap';
 import { Gap } from '../../globalStyles';
@@ -54,6 +55,11 @@ const Text = ({ background }) => {
                 전문요원 없는 정신건강복지센터 15곳… <br />
                 농어촌 정신건강 인력난
               </Title>
+              <Gap size="50px" />
+              <Gulim>“시골이니까 일반 간호사 뽑기도 너무 힘들어요.”</Gulim>
+              <Gap size="10px" />
+              <Gulim>-고흥군 보건소 정신보건팀 김희정 주무관-</Gulim>
+              <Gap size="100px" />
               <Paragraph>
                 <Line>
                   정신건강 의료뿐 아니라 복지에서도 농어촌과 도시의 격차가
@@ -81,8 +87,19 @@ const Text = ({ background }) => {
               </Paragraph>
               <Gap size="100px" />
               <MentalHealthCenterMap />
-
               <Paragraph style={{ marginBottom: 0 }}>
+                <Reference>
+                  <span>
+                    * 정신건강전문인력: 정신건강의학과 전문의, 정신건강 간호사,
+                    <br />
+                    정신건강 사회복지사, 정신건강 임상심리사, 정신건강
+                    작업치료사
+                  </span>
+                  <span>
+                    * 정신건강일반인력: 간호사, 사회복지사, 임상심리사
+                  </span>
+                  <span>* 기타인력: 간호조무사, 기타 행정직</span>
+                </Reference>
                 <Line>
                   분석 결과 정신건강 전문인력이 한 명도 없는
                   기초정신건강복지센터는 전남 고흥군, 경남 함양군, 충남 보령시
@@ -148,9 +165,9 @@ const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 280px 0 0;
+  padding: 200px 0 0;
 
   @media screen and (max-width: 425px) {
-    padding: 200px 0 0;
+    padding: 50px 0 0;
   }
 `;

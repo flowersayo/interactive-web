@@ -12,8 +12,7 @@ const End = ({ bgImg, children }) => {
         <Wrapper>
           <MsgWrapper>
             <Message>
-              지방 소멸은 이미 심각하게 진행됐습니다. 더 늦기 전에 이 사실을
-              널리 알려주세요.
+              농어촌 노인의 정신건강을 위한 대안이 필요한 시점입니다
             </Message>
             <Gap size="100px" />
           </MsgWrapper>

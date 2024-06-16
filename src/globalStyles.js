@@ -71,7 +71,7 @@ export const TextWrapper = styled.div`
 
 // 제목
 export const Title = styled.h1`
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
   line-height: 65px;
   letter-spacing: 1.6px;
@@ -80,11 +80,11 @@ export const Title = styled.h1`
   color: #fff;
 
   @media screen and (max-width: 425px) {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 50px;
     letter-spacing: 1.6px;
     margin-bottom: 60px;
-    width: 100vw;
+    width: 80vw;
   }
 `;
 
@@ -99,7 +99,6 @@ export const SubTitle = styled.h1`
   width: 590px;
 
   @media screen and (max-width: 425px) {
-    margin: 50px 0 0;
     font-size: 22px;
     line-height: 30px;
     width: 100vw;
@@ -113,7 +112,7 @@ export const Paragraph = styled.div`
   color: #fff;
   line-height: 40px;
   white-space: pre-line;
-  width: 600px;
+  width: 700px;
   margin-bottom: 20px;
 
   &:last-child {
@@ -127,10 +126,10 @@ export const Paragraph = styled.div`
   @media screen and (max-width: 425px) {
     font-size: 16px;
     line-height: 30px;
-    width: 350px;
+    width: 80vw;
   }
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 375px) {
     font-size: 16px;
     line-height: 30px;
     width: 80vw;
@@ -150,7 +149,7 @@ export const Underline = styled.span`
   background-image: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(0, 198, 121, 0.7) 0
+    rgba(63, 107, 178, 0.7) 0
   );
   background-size: 100% 100%;
 
@@ -168,14 +167,27 @@ export const Line = styled.span`
   line-height: 40px;
 
   @media screen and (max-width: 425px) {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+`;
+
+export const Gulim = styled.div`
+  font-family: 'Noto Serif KR', serif;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+  font-style: oblique;
+
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
     line-height: 30px;
   }
 `;
 
 // 레퍼런스 (그래프 출처, 설명)
 export const ReferenceWrapper = styled.div`
-  width: 910px;
+  width: 77vw;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -195,6 +207,11 @@ export const ReferenceWrapper = styled.div`
     line-height: 18.5px;
   }
 
+  span:nth-child(3) {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
   @media screen and (max-width: 910px) {
     width: 93.75vw;
   }
@@ -208,9 +225,15 @@ export const ReferenceWrapper = styled.div`
       font-size: 13px;
       line-height: 17px;
       margin-bottom: 2px;
+      color: red;
     }
 
     span:nth-child(2) {
+      font-size: 11px;
+      line-height: 15px;
+    }
+
+    span:nth-child(3) {
       font-size: 11px;
       line-height: 15px;
     }

@@ -255,7 +255,7 @@ const SeniorSuicideMap = () => {
                       인구 10만명 당
                     </District>
 
-                    <EmptyIndex color={getColor(percentage)} size={'45px'}>
+                    <EmptyIndex color={getColor(percentage)} size={'40px'}>
                       <AnimatedNumber
                         animateToNumber={`${
                           percentage.toString().split('.')[0]
