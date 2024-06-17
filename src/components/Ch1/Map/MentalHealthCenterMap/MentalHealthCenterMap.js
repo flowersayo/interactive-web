@@ -38,6 +38,7 @@ import {
   LegendEl,
   Unit,
   Reference,
+  HideOnLargeScreens,
 } from '../../../Common/GridElements';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
 import markerC from '../../../../assets/images/markerCur.svg';
@@ -254,7 +255,7 @@ const MentalHealthCenterMap = () => {
                       {siDoName} {siGunGuName}
                     </District>
                     <EmptyIndex color={getColor(percentage)} size={'35px'}>
-                      기초정신건강복지센터 전문인력 비율&nbsp;
+                      정신 건강 전문 인력 비율&nbsp;
                       <AnimatedNumber
                         animateToNumber={`${
                           percentage.toString().split('.')[0]
@@ -287,8 +288,8 @@ const MentalHealthCenterMap = () => {
                             tension: 89,
                             friction: 40,
                           }}
-                        />{' '}
-                        명
+                        />
+                        &nbsp; 명
                       </Unit>
                       <Unit>
                         <b>*일반 인력 : &nbsp;</b>
@@ -299,8 +300,8 @@ const MentalHealthCenterMap = () => {
                             color: getColor(percentage),
                           }}
                           config={{ tension: 89, friction: 40 }}
-                        />{' '}
-                        명
+                        />
+                        &nbsp; 명
                       </Unit>
                       <Unit>
                         <b>*기타 인력 : &nbsp;</b>
@@ -311,8 +312,8 @@ const MentalHealthCenterMap = () => {
                             color: getColor(percentage),
                           }}
                           config={{ tension: 89, friction: 40 }}
-                        />{' '}
-                        명
+                        />
+                        &nbsp; 명
                       </Unit>
                     </Sentence>
                   </EmptyHouseResult>
@@ -348,6 +349,9 @@ const MentalHealthCenterMap = () => {
             <span>출처: 광역·기초자치단체별 정보공개청구</span>
             <span>※ 기준: 2024년 3월, 비상근직 포함</span>
           </ReferenceWrapper>
+          <HideOnLargeScreens>
+            <Reference>상세 지도는 PC 웹에서 확인해주세요. </Reference>
+          </HideOnLargeScreens>
         </InfoRow>
       </InfoWrapper>
     </Section>

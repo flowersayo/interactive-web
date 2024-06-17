@@ -51,7 +51,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     height: auto;
   }
 `;
@@ -64,7 +64,7 @@ export const TextWrapper = styled.div`
   align-items: center;
   padding: 151px 0;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     padding: 151px 0 103px;
   }
 `;
@@ -80,12 +80,12 @@ export const Title = styled.h1`
   color: #fff;
   max-width: 500px;
 
-  @media screen and (max-width: 425px) {
-    font-size: 30px;
+  @media screen and (max-width: 375px) {
+    font-size: 25px;
     line-height: 50px;
     letter-spacing: 1.6px;
     margin-bottom: 60px;
-    width: 80vw;
+    width: 83vw;
   }
 `;
 
@@ -99,7 +99,7 @@ export const SubTitle = styled.h1`
   color: #fff;
   width: 590px;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     font-size: 22px;
     line-height: 30px;
     width: 100vw;
@@ -124,7 +124,7 @@ export const Paragraph = styled.div`
     width: 80vw;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     font-size: 16px;
     line-height: 30px;
     width: 80vw;
@@ -154,8 +154,8 @@ export const Underline = styled.span`
   );
   background-size: 100% 100%;
 
-  @media screen and (max-width: 425px) {
-    font-size: 16px;
+  @media screen and (max-width: 375px) {
+    font-size: 14px;
     line-height: 30px;
   }
 `;
@@ -167,7 +167,7 @@ export const Line = styled.span`
   font-size: 20px;
   line-height: 40px;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     font-size: 14px;
     line-height: 30px;
   }
@@ -180,7 +180,7 @@ export const Gulim = styled.div`
   color: #fff;
   font-style: oblique;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     font-size: 14px;
     line-height: 30px;
   }
@@ -221,7 +221,7 @@ export const ReferenceWrapper = styled.div`
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     span:nth-child(1) {
       font-size: 13px;
       line-height: 17px;
@@ -264,7 +264,7 @@ export const ReferenceWrapper02 = styled.div`
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     margin-bottom: 50px;
     span {
       font-size: 11px;

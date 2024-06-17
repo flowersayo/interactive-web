@@ -97,7 +97,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 280px;
+  padding-top: 200px;
 
   @media screen and (max-width: 425px) {
     padding-top: 50px;

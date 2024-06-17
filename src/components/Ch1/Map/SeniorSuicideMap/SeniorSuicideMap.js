@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import styled from 'styled-components';
 import {
   MapContainer,
   GeoJSON,
@@ -37,6 +38,8 @@ import {
   LegendColor,
   LegendEl,
   Unit,
+  Reference,
+  HideOnLargeScreens,
 } from '../../../Common/GridElements';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
 import markerC from '../../../../assets/images/markerCur.svg';
@@ -314,6 +317,10 @@ const SeniorSuicideMap = () => {
             <span>시군구 노인 자살률 지도</span>
             <span>( 출처: 통계청 )</span>
           </ReferenceWrapper>
+
+          <HideOnLargeScreens>
+            <Reference>상세 지도는 PC 웹에서 확인해주세요. </Reference>
+          </HideOnLargeScreens>
         </InfoRow>
       </InfoWrapper>
     </Section>

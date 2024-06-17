@@ -83,32 +83,23 @@ export const MapWrapper = styled.div`
   position: relative;
   z-index: 1;
   width: 910px;
-  height: 510px;
+  height: 550px;
   margin-top: 40px;
 
-  @media screen and (max-width: 910px) {
-    width: 93.75vw;
-    height: 550px;
+  @media screen and (max-width: 1075px) {
+    width: 83vw;
+    min-width: 200px;
   }
 
-  @media screen and (max-width: 768px) {
-    width: 720px;
-    height: 550px;
-  }
-
-  @media screen and (max-width: 720px) {
-    width: 93.75vw;
-    height: 550px;
-  }
-
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
+    // 모바일에서는 지도 제거
     display: none;
   }
 `;
 
 export const Reference = styled.div`
   text-align: left;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 170%;
   margin: 10px;
 `;
@@ -158,12 +149,20 @@ export const ReferenceBox = styled.div`
   border: 0.5px solid #aaaaaa;
   padding: 10px;
 `;
+export const HideOnLargeScreens = styled.div`
+  background-color: rgba(255, 255, 255, 0.1);
 
+  margin-top: 50px;
+  @media (min-width: 375px) {
+    display: none;
+  }
+`;
 export const ReferenceWrapper = styled.div`
-  width: 100%;
-  right: 0;
+  width: 910px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   color: #aaaaaa;
   font-family: 'Noto Serif KR', serif;
   text-align: right;
@@ -186,19 +185,10 @@ export const ReferenceWrapper = styled.div`
     margin-bottom: 2px;
   }
 
-  @media screen and (max-width: 910px) {
-    width: 93.75vw;
+  @media screen and (max-width: 1075px) {
+    width: 83vw;
   }
-
-  @media screen and (max-width: 768px) {
-    margin-top: 20px;
-  }
-
-  @media screen and (max-width: 720px) {
-    width: 93.75vw;
-  }
-
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
     width: 80vw;
     span:nth-child(1) {
       font-size: 13px;
@@ -231,10 +221,14 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 5rem;
 
-  @media screen and (max-width: 425px) {
-    font-size: 22px;
+  @media screen and (max-width: 375px) {
+    font-size: 23px;
+    max-width: 83vw;
     line-height: 25px;
     margin-bottom: 50px;
+    overflow-wrap: break-word; /* 글자 줄바꿈 */
+    word-break: break-word; /* 긴 단어 줄바꿈 */
+    white-space: normal; /* 기본 줄바꿈 */
   }
 `;
 
@@ -292,7 +286,11 @@ export const ResultWrapper = styled.div`
   width: 100%;
   margin: 40px 0 0 0;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 375px) {
+    margin: 25px 0 0 0;
+  }
+
+  @media screen and (max-width: px) {
     margin: 25px 0 0 0;
   }
 `;
@@ -394,7 +392,9 @@ export const ExtinctIndex = styled.div`
 
 export const EmptyIndex = styled.div`
   display: flex;
+  justify-content: center;
   color: ${({ color }) => color};
+  width: 100%;
 
   font-size: ${({ size }) => (size ? size : '45px')};
   font-weight: 800;
@@ -403,12 +403,12 @@ export const EmptyIndex = styled.div`
   white-space: nowrap;
 
   @media screen and (max-width: 425px) {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 45px;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 40px;
   }
 `;

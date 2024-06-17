@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import styled from 'styled-components';
 import {
   MapContainer,
   GeoJSON,
@@ -37,6 +38,8 @@ import {
   LegendColor,
   LegendEl,
   Unit,
+  HideOnLargeScreens,
+  Reference,
 } from '../../../Common/GridElements';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
 import markerC from '../../../../assets/images/markerCur.svg';
@@ -254,7 +257,7 @@ const MentalHospitaMap = () => {
 
                       <Unit>( 2024년 1월 기준 )</Unit>
                       <EmptyIndex idx={Number(cnt)} size={'30px'}>
-                        정신건강 의료기관{' '}
+                        정신건강 의료기관&nbsp;
                         <AnimatedNumber
                           animateToNumber={cnt} // 정수 부문
                           config={{ tension: 89, friction: 40 }}
@@ -274,7 +277,7 @@ const MentalHospitaMap = () => {
                           .
                           <AnimatedNumber
                             animateToNumber={
-                              cntPerPoP.toFixed(2).toString().split('.')[1]
+                              cntPerPoP.toFixed(1).toString().split('.')[1]
                             }
                             includeComma
                             config={{ tension: 89, friction: 40 }}
@@ -282,7 +285,6 @@ const MentalHospitaMap = () => {
                           {'  '}개
                         </Unit>
                       </Sentence>
-                      <br />
                     </EmptyHouseResult>
                   </ResultWrapper>
                 </>
@@ -317,6 +319,9 @@ const MentalHospitaMap = () => {
                 ※ 기준: 2024년 1월 기준 시군구별 정신건강의학과(보건기관 제외)
               </span>
             </ReferenceWrapper>
+            <HideOnLargeScreens>
+              <Reference>상세 지도는 PC 웹에서 확인해주세요. </Reference>
+            </HideOnLargeScreens>
           </InfoRow>
         </InfoWrapper>
       </Section>

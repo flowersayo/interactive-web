@@ -90,8 +90,8 @@ const ProgressContainer = styled.div`
   width: 100vw;
   display: ${({ show }) => (show ? 'block' : 'none')};
 
-  @media screen and (max-width: 425px) {
-    top: ${({ reduce }) => (reduce ? '60px' : '88px')};
+  @media screen and (max-width: 375px) {
+    top: 60px;
   }
 `;
 

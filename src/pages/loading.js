@@ -14,7 +14,8 @@ export default Loading;
 
 const Section = styled.section`
   position: relative;
-
+  background: transparent;
+  background-color: black;
   width: 100vw;
   height: 100vh;
 `;

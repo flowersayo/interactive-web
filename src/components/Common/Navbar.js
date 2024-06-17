@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components/macro';
 import { useLocation } from 'react-router-dom';
-import { FaFacebookF, FaTwitter } from 'react-icons/fa';
-import { FacebookShareButton, TwitterShareButton } from 'react-share';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { handleMenu } from './../../modules/menuReducer';
 import LogoSrc from '../../assets/images/Logo/Logo.png';
 
-// 컴포넌트
-import KaKaoShareButton from './KaKao1';
-import MenuNav from './MenuNav';
 import HorizontalIndicator from './HorizontalIndicator';
-// 로고 이미지: KBS 창원 X 시사기획 창
-import CompanyLogo from '../../assets/images/Logo/Logo.png';
 
 const Navbar = () => {
   const [reduce, setReduce] = useState(true);
@@ -67,6 +61,7 @@ const Navbar = () => {
         setReduce(true);
       }
     };
+
     window.addEventListener('scroll', reduceSize);
     return () => {
       window.removeEventListener('scroll', reduceSize);
@@ -82,18 +77,7 @@ const Navbar = () => {
       <Nav reduce={reduce} style={style}>
         {/* 현재 경로 띄우기 */}
         <CurrentPath>{path}</CurrentPath>
-        <Logo src={LogoSrc} />
-        {/* SNS 공유 버튼 모음 */}
-
-        {/* 햄버거 메뉴 
-        <StyledBurger open={open} onClick={onClickMenu}>
-          <div />
-          <div />
-          <div />
-          <div />
-        </StyledBurger>
-        */}
-        {/* 네비게이션 메뉴 */}
+        <Logo src={LogoSrc} reduce={navbar} />
       </Nav>
       {/* 수평 스크롤 인디케이터 */}
       <HorizontalIndicator />
@@ -111,12 +95,8 @@ const Nav = styled.nav`
   position: fixed;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
-    padding: 18.09px 0;
-  }
-
-  @media screen and (max-width: 425px) {
-    height: ${({ reduce }) => (reduce ? '88px' : '60px')};
+  @media screen and (max-width: 375px) {
+    height: 60px;
     transition: height 0.4s;
     padding: 20px 0;
   }
@@ -125,12 +105,14 @@ const Nav = styled.nav`
 const Logo = styled.img`
   position: absolute;
   cursor: pointer;
-  display: block;
+
   top: 0;
   bottom: 0;
   left: 44px;
   margin: auto 0;
   width: 70px;
+  display: ${({ reduce }) => (reduce ? 'block' : 'none')};
+  transition: display 0.4s;
 
   @media screen and (max-width: 425px) {
     left: 20px;
