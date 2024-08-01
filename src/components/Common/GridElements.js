@@ -11,7 +11,7 @@ export const InfoWrapper = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding-bottom: 9.438rem;
+  padding-bottom: 3.438rem;
 
   @media screen and (max-width: 425px) {
     padding-bottom: 102px;

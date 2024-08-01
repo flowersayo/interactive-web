@@ -349,9 +349,6 @@ const MentalHealthCenterMap = () => {
             <span>출처: 광역·기초자치단체별 정보공개청구</span>
             <span>※ 기준: 2024년 3월, 비상근직 포함</span>
           </ReferenceWrapper>
-          <HideOnLargeScreens>
-            <Reference>상세 지도는 PC 웹에서 확인해주세요. </Reference>
-          </HideOnLargeScreens>
         </InfoRow>
       </InfoWrapper>
     </Section>
