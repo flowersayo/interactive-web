@@ -186,7 +186,7 @@ const MentalHealthCenterMap = () => {
     const sigungu = district.properties.sgg_nm;
     const percentage = district.properties.pro_rate; // 정신 건강 전문 요원 비율
 
-    const pro_num = district.properties.sum; // 레이어의 전문 요원 수
+    const pro_num = district.properties.pro_num; // 레이어의 전문 요원 수
     const gen_num = district.properties.gen_num;
     const etc_num = district.properties.etc_num;
     const clickedLat = district.properties.lat; // 레이어의 lat 설정
@@ -349,6 +349,9 @@ const MentalHealthCenterMap = () => {
             <span>출처: 광역·기초자치단체별 정보공개청구</span>
             <span>※ 기준: 2024년 3월, 비상근직 포함</span>
           </ReferenceWrapper>
+          <HideOnLargeScreens>
+            <Reference>상세 지도는 PC 웹에서 확인해주세요. </Reference>
+          </HideOnLargeScreens>
         </InfoRow>
       </InfoWrapper>
     </Section>
